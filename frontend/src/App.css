@@ -1,0 +1,146 @@
+/* Estilos Generales */
+body {
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Cursor de mano para textos clickeables */
+.clickable-text {
+    cursor: pointer;
+}
+.clickable-text:hover {
+    text-decoration: underline;
+    color: #0d6efd !important;
+}
+
+/* ===========================
+   LOGIN
+   =========================== */
+#login-section {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100vh;
+    background-color: #0a0e27;
+    z-index: 2000;
+}
+.logo-circle {
+    width: 100px; height: 100px;
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 94, 98, 0.4);
+}
+.login-bg-curve-top {
+    position: absolute; top: -10%; left: -10%; width: 120%; height: 40%;
+    background-color: #ffffff; border-radius: 0 0 50% 50%; opacity: 0.05;
+}
+.login-bg-curve-bottom {
+    position: absolute; bottom: -20%; right: -10%; width: 120%; height: 40%;
+    background-color: #ffffff; border-radius: 50% 50% 0 0; opacity: 0.05;
+}
+.login-container { z-index: 1; max-width: 400px; width: 90%; }
+
+/* ===========================
+   APP HEADER
+   =========================== */
+.app-header {
+    height: 70px;
+    z-index: 1030;
+}
+.app-header input:focus {
+    box-shadow: none;
+    border: 1px solid #ced4da;
+}
+
+/* ===========================
+   CONTENEDORES Y PILLS
+   =========================== */
+
+/* Contenedor con borde gradiente */
+.gradient-border-container {
+    background: #fff;
+    border-radius: 20px !important;
+    position: relative;
+    border: 1px solid #d63384; 
+    border-image: linear-gradient(45deg, #a73ee7, #ff9966) 1;
+    box-shadow: 0 0 0 1px #e0cffc, 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #b197fc; 
+}
+
+.pill-header {
+    background-color: #fff;
+    border-color: #6c757d;
+}
+
+/* Categorías (Pills del Home) - ACTUALIZADO PARA CENTRAR */
+.category-pill {
+    border: 1px solid #e0e0e0; 
+    border-bottom: 2px solid #ffcc00; /* Linea amarilla abajo */
+    border-radius: 50px;
+    padding: 25px 15px; 
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    gap: 30px; /* Espacio uniforme entre iconos */
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+.category-pill i {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.category-pill i:hover { transform: scale(1.2); color: #0d6efd !important; }
+
+/* Especificaciones de producto (Home) */
+.product-specs span {
+    font-size: 0.85rem; /* Tamaño legible */
+    color: #555;
+    margin-bottom: 2px;
+}
+
+/* ===========================
+   NAVEGACIÓN INFERIOR AZUL
+   =========================== */
+.custom-navbar-blue {
+    background: linear-gradient(to top, #000033, #000066); 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.nav-btn {
+    border: none;
+    background: transparent;
+    color: #7a8ec5; 
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+
+.custom-navbar-blue .nav-btn.active {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    transform: translateY(-5px);
+}
+video {object-fit: cover;}
+.bg-navy { background-color: #000040; }
+.text-purple { color: #6f42c1; }
+.border-purple { border: 1px solid #d1c4e9 !important; }
+.btn-purple-gradient {
+    background: linear-gradient(90deg, #ff9a9e 0%, #6f42c1 100%);
+    border: none;
+}
+.home-circle {
+    background: #000040;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -30px;
+    border: 4px solid white;
+}
+.clickable { cursor: pointer; }
+.nav-icon { cursor: pointer; transition: 0.3s; }
+.home-btn i { font-size: 2rem !important; }
