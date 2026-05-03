@@ -395,7 +395,7 @@ const HistoryViewSimulated = ({setView}) => (
     <span className="badge rounded-pill bg-light text-dark border px-3 mb-3 small">Historial de compras</span>
     <div className="card p-4 border-purple rounded-4 text-muted text-center mb-4 shadow-sm">No hay registro de compras pasadas.</div>
     
-    {/* Nuevo diseño de Soporte Técnico idéntico a la imagen */}
+    {/*Soporte Técnico */}
     <div className="p-1 rounded-4 shadow-sm mb-3" style={{ background: 'linear-gradient(to right, #b200ff, #ffaa00)' }}>
       <div className="bg-white rounded-4 p-3 w-100 h-100">
           <div className="d-flex align-items-center justify-content-start mb-3">
@@ -420,7 +420,7 @@ const HistoryViewSimulated = ({setView}) => (
 );
 
 const ProfileView = ({userProfile, setUserProfile, editMode, setEditMode, setIsLoggedIn}) => {
-  // Función para agregar direcciones (ya la tenías)
+  // Función para agregar direcciones
   const addAddress = () => {
     const newAddress = window.prompt("Ingresa la nueva dirección:");
     if (newAddress && newAddress.trim() !== "") {
@@ -432,7 +432,7 @@ const ProfileView = ({userProfile, setUserProfile, editMode, setEditMode, setIsL
     setUserProfile({...userProfile, addresses: userProfile.addresses.filter(a => a.id !== idToRemove)});
   };
 
-  // NUEVA Función para agregar tarjetas
+  // Función para agregar tarjetas
   const addCard = () => {
     const newCard = window.prompt("Ingresa los últimos 4 dígitos de tu tarjeta (ej: ****1234):");
     if (newCard && newCard.trim() !== "") {
@@ -442,7 +442,7 @@ const ProfileView = ({userProfile, setUserProfile, editMode, setEditMode, setIsL
     }
   };
 
-  // NUEVA Función para eliminar tarjetas (opcional, pero buena práctica)
+  // Función para eliminar tarjetas
   const removeCard = (cardToRemove) => {
     setUserProfile({...userProfile, cards: userProfile.cards.filter(c => c !== cardToRemove)});
   };
@@ -476,7 +476,7 @@ const ProfileView = ({userProfile, setUserProfile, editMode, setEditMode, setIsL
         </div>
       </div>
 
-      {/* Sección de Medios de Pago Actualizada */}
+      {/* Sección de Medios de Pago */}
       <div className="card p-3 mb-3 border-purple shadow-sm rounded-4">
         <div className="fw-bold small mb-2"><i className="bi bi-credit-card me-2 text-success"></i> Medios de pago</div>
         
