@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  local-mongodb:
+    image: mongo:6.0
+    container_name: smileshop_mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - network_logistica
+
+  backend-api:
+    build: .
+    container_name: smileshop_backend
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb://local-mongodb:27017/smileshop_internal
+      - PORT=5000
+    depends_on:
+      - local-mongodb
+    networks:
+      - network_logistica
+
+networks:
+  network_logistica:
+    driver: bridge
+
+volumes:
+  mongo_data:

@@ -1,3 +1,23 @@
+/**
+ * Establece la conexion asincrona con el cluster de MongoDB Atlas.
+ * Utiliza la URI configurada en las variables de entorno para inicializar
+ * el pool de conexiones del ODM (Mongoose) de forma segura.
+ * * @async
+ * @function connectDatabase
+ * @param {string} connectionString - URL de conexion cifrada de MongoDB Atlas.
+ * @throws {MongoParseError} Si la cadena de conexion no tiene el formato correcto.
+ * @returns {Promise<void>} Promesa resuelta cuando la conexion es exitosa.
+ */
+async function connectDatabase(connectionString) {
+try {
+    await mongoose.connect(connectionString);
+    console.log("Conexión exitosa a MongoDB Atlas");
+} catch (error) {
+    console.error("Error crítico de conexión:", error);
+    process.exit(1);
+}
+}
+
 // backend/server.js
 const express = require('express');
 const mongoose = require('mongoose');

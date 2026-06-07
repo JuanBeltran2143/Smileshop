@@ -1,23 +1,27 @@
-# Proyecto de Automatización Logística
+# SmileShop - Sistema de Gestión Logística Interna 🚀
 
-## Descripción del Proyecto
-SmileShop es un sistema prototipo de gestión logística desarrollado para optimizar la administración de inventarios en la Industria 4.0. El proyecto utiliza **Node.js** y **React**, con una arquitectura de persistencia basada en **MongoDB Atlas** (NoSQL), garantizando escalabilidad y eficiencia ante altos volúmenes de datos.
+Ecosistema digital automatizado diseñado para optimizar el control de stock, auditoría de mercancías y trazabilidad de pedidos para empresas de consumo masivo con alta densidad transaccional.
 
-## Enfoque Académico
+## 🛠️ Stack Tecnológico
+* **Frontend:** React.js + Bootstrap
+* **Backend:** Node.js + Express
+* **Base de Datos:** MongoDB Atlas (NoSQL)
+* **Contenedores:** Docker & Docker Compose
+* **CI/CD:** GitHub Actions
 
-### Asignatura: Mantenimiento de Software
+## 📦 Despliegue en Producción
+* **UI (Frontend):** Desplegado en [Vercel](https://vercel.com)
+* **API (Backend):** Alojado en [Render](https://render.com)
+* **Persistencia:** Clúster multi-nodo en [MongoDB Atlas](https://mongodb.com/atlas)
 
-Inicialmente el proyecto demuestra el impacto de las bases de datos NoSQL mediante:
-* **Flexibilidad de esquema:** Gestión de atributos variables en productos sin esquemas rígidos.
-* **Escalabilidad:** Arquitectura preparada para el crecimiento horizontal y alta disponibilidad en la nube.
-* **Eficiencia:** Implementación de consultas optimizadas para un entorno logístico de alta demanda.
+## 🚀 Instrucciones de Ejecución Local
 
-Este repositorio integra prácticas profesionales de desarrollo colaborativo:
-* **Historias de Usuario:** Implementación de un flujo funcional priorizado (CRUD de inventario, roles, control de stock).
-* **Control de Versiones:** Uso estratégico de Git (`branch`, `add`, `commit`, `remote`, `push`, `status`. `log`, `clone` e `ignore`) para el desarrollo integrado sin división de tecnologías.
-* **Documentación:** Aplicación de estándares de marcado para facilitar el mantenimiento y la trazabilidad del código.
+### Requisitos Previos
+* Node.js (v18 o superior)
+* Docker Desktop instalado
 
-## Instrucciones de acceso
-1. **Historias de Usuario:** Consultar el archivo `HISTORIAS_USUARIO.md` para ver el alcance funcional y criterios de aceptación.
-2. **Estructura:** El proyecto integra el *frontend* y *backend* en un solo repositorio unificado para facilitar el flujo de mantenimiento.
-3. **Persistencia:** La conexión a la base de datos se gestiona mediante variables de entorno (MongoDB Atlas).
+### Clonar y Configurar
+1. Clonar el repositorio:
+   ```bash
+   git clone [https://github.com/JuanBeltran2143/Smileshop.git](https://github.com/JuanBeltran2143/Smileshop.git)
+   cd smileshop

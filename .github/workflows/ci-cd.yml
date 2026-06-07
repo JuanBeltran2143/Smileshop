@@ -1,0 +1,51 @@
+name: SmileShop Continuous Integration & Deployment
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  quality-and-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout de codigo
+        uses: actions/checkout@v3
+
+      - name: Inicializar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Instalar Dependencias
+        run: |
+          npm install
+          cd backend && npm install
+
+      - name: Validar Estilo de Codigo (Lint)
+        run: npm run lint --if-present
+
+      - name: Ejecutar Pruebas Automatizadas
+        run: npm test -- --coverage --watchAll=false --passWithNoTests
+
+  deploy-to-production:
+    needs: quality-and-tests
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Frontend en Vercel
+        uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod'
+
+      - name: Disparar Deploy Backend en Render
+        run: |
+          if [ -n "${{ secrets.RENDER_DEPLOY_HOOK }}" ]; then
+            curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
+          else
+            echo "No se configuro el webhook de Render, saltando paso."
+          fi
