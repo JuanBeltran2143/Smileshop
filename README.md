@@ -25,3 +25,11 @@ Ecosistema digital automatizado diseñado para optimizar el control de stock, au
    ```bash
    git clone [https://github.com/JuanBeltran2143/Smileshop.git](https://github.com/JuanBeltran2143/Smileshop.git)
    cd smileshop
+
+## 🎥 Video Demostrativo
+Puedes ver el video con la explicación y el funcionamiento del proyecto en el siguiente enlace:
+👉 [Enlace al Video de Sustentación](https://youtu.be/58dLNZKXViE)
+
+## 📂 Documento Entregable
+El documento con la planeación e implementación técnica de la plataforma se encuentra disponible aquí:
+👉 [Descargar Documento Entregable]()
